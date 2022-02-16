@@ -9,7 +9,9 @@ router.post('/users', (req, res) => {
     return res.send({message: `Método POST de usuários funcionando corretamente!`})
 });
 
-router.post('/users/create', (req, res) => {
+
+// Reconhece /users junto ao app.use? 
+router.post('/create', (req, res) => {
     return res.send({message: `Método POST de usuários funcionando corretamente!`})
 });
 
