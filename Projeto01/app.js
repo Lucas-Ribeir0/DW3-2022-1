@@ -1,12 +1,11 @@
 const express = require('express')
 
-// Instanciar o EXPRESS
+//Instanciar o EXPRESS
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send({message: 'Rota Raiz Encontrada!'})
-});
+const indexRoute = require('./routes/index.js')
 
+app.use('/', indexRoute)
 // Configurar a porta para execução do aplicativo.
 app.set('porta', 3000);
 
