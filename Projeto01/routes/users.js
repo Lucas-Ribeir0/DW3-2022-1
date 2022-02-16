@@ -6,11 +6,12 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    return res.send({message: `Método POST de usuários funcionando corretamente!`})
+    let obj = req.query;
+    return res.send({message: `Método POST de usuários funcionando corretamente! ${obj.nome}`})
 });
 
 
-// Reconhece /users junto ao app.use? 
+// Reconhece /users junto ao app.use
 router.post('/create', (req, res) => {
     return res.send({message: `Usuários criado com sucesso!`})
 });
