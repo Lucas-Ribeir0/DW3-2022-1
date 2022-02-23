@@ -2,4 +2,21 @@ MongoDB Atlas
 
 BCrypt
 
-a
+-- Instalar Express
+npm install --save express
+
+-- Instalar nodemon
+npm install --save-dev nodemon 
+
+-- Instalar extensão mySQL
+npm install --save mysql2
+
+-- Instalar Sequelize 
+npm install --save sequelize
+npm install --save-dev sequelize-cli
+
+-- Logar no mysql por CMD
+mysql -h <localhost> -u <root> -p
+
+
+- PI - 
