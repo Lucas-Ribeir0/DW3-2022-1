@@ -6,8 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    let obj = req.query;
-    return res.send({message: `Método POST de usuários funcionando corretamente! ${obj.nome}`})
+    return res.send({message: `Método POST de usuários funcionando corretamente!`})
 });
 
 

@@ -1,21 +1,31 @@
 const express = require('express')
+const http = require('http')
+
+require('./database/indexDb.js');
 
 //Instanciar o EXPRESS
 const app = express();
 
-const indexRoute = require('./routes/index.js')
-const usersRoute = require('./routes/users.js')
+const indexRoute = require('./src/routes/index.js')
+const usersRoute = require('./src/routes/users.js')
 
 app.use('/', indexRoute)
 app.use('/users', usersRoute)
 
-// Configurar a porta para execução do aplicativo.
+
+// Configurar a porta e URL para execução do aplicativo.
+
+app.set('url', 'http://localhost:')
 app.set('porta', 3000);
 
-app.listen(app.get('porta'), function() {
+http.createServer(app).listen(app.get('porta', function(){
+    console.log('Servidor rodando na porta: '+app.get('url'))
+}))
+
+/* app.listen(app.get('porta'), function() {
     console.log('Servidor rodando na porta: '+app.get('porta'))
 });
-
+ */
 module.exports = app; 
 
 
