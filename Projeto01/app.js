@@ -1,7 +1,7 @@
 const express = require('express')
 const http = require('http')
 
-require('./database/indexDb.js');
+require('./src/database/indexDb.js');
 
 //Instanciar o EXPRESS
 const app = express();
@@ -18,14 +18,14 @@ app.use('/users', usersRoute)
 app.set('url', 'http://localhost:')
 app.set('porta', 3000);
 
-http.createServer(app).listen(app.get('porta', function(){
-    console.log('Servidor rodando na porta: '+app.get('url'))
-}))
+http.createServer(app).listen(app.get('porta'), function(){
+    console.log('Servidor rodando na porta: ' + app.get('url') + app.get('porta'));
+})
 
 /* app.listen(app.get('porta'), function() {
     console.log('Servidor rodando na porta: '+app.get('porta'))
-});
- */
+}); */
+
 module.exports = app; 
 
 
