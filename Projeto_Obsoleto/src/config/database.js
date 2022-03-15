@@ -2,10 +2,11 @@ module.exports = {
     host: "localhost",
     dialect: "mysql",
     username: "root",
-    password: "toor",
+    password: "fatec123*",
     database: "webIII",
     define: {
         timestamps: true,
-        underscored: true,
+        underscored: true
     },
 };
+
