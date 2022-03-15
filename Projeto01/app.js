@@ -6,11 +6,11 @@ require('./src/database/indexDb.js');
 // instanciar o express
 const app = express();
 
-const indexRoute = require('./src/routes/index.js')
-const usersRoute = require('./src/routes/users.js')
+const indexRoute = require('./src/api/routes/indexRoutes.js')
+const usersRoute = require('./src/api/routes/usersRoutes.js')
 
-app.use('/', indexRoute)
-app.use('/users', usersRoute)
+app.use(indexRoute)
+app.use(usersRoute)
 
 //configurar a porta e url para execução do aplicativo
 app.set('url', 'http://localhost:')
