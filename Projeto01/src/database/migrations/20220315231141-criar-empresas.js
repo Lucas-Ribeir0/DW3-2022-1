@@ -23,6 +23,14 @@ module.exports = {
         type: Sequelize.STRING(60),
         allowNull: false,
       },
+      created_At: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_At: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
     });
   },
 

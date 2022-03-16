@@ -5,12 +5,15 @@ require('./src/database/indexDb.js');
 
 // instanciar o express
 const app = express();
+app.use(express.json())
 
-const indexRoute = require('./src/api/routes/indexRoutes.js')
-const usersRoute = require('./src/api/routes/usersRoutes.js')
+const indexRoutes = require('./src/api/routes/indexRoutes.js')
+const usersRoutes = require('./src/api/routes/usersRoutes.js')
+const empresasRoutes = require('./src/api/routes/empresasRoutes.js')
 
-app.use(indexRoute)
-app.use(usersRoute)
+app.use(indexRoutes)
+app.use(usersRoutes)
+app.use(empresasRoutes)
 
 //configurar a porta e url para execução do aplicativo
 app.set('url', 'http://localhost:')
