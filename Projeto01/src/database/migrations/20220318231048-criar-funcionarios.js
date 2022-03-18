@@ -2,22 +2,30 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    return await queryInterface.createTable('empresas', {
+    return await queryInterface.createTable('funcionarios', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
-      emp_nome: {
+      emp_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {model: 'empresas', key: 'id'}, // Criando uma chave estrangeira
+        onUpdate: 'CASCADE', // Faz o "Update" ou "Delete" em modo cascata, deletando ou atualizando todas as "childrens" da chave primária.
+        onDelete: 'CASCADE',
+      },
+      
+      fun_nome: {
         type: Sequelize.STRING(60),
         allowNull: false,
       },
-      emp_contato: {
+      fun_password: {
         type: Sequelize.STRING(30),
         allowNull: false,
       },
-      emp_email: {
+      fun_email: {
         type: Sequelize.STRING(60),
         allowNull: false,
       },
@@ -33,6 +41,6 @@ module.exports = {
   },
 
   async down (queryInterface, Sequelize) {
-    return queryInterface.dropTable('empresas');
+    return queryInterface.dropTable('funcionarios');
   }
 };
