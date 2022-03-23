@@ -12,6 +12,9 @@ class Empresas extends Model {
         });
         return this;
     }
+    static associate(models) {
+        this.hasMany(models.Funcionarios, {foreignKey: "emp_id", as: "empresa"})
+    }
 }
 
 module.exports = Empresas;

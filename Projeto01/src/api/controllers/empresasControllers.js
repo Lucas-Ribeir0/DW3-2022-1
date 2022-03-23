@@ -5,6 +5,7 @@ module.exports = {
         const empresas = await Empresas.findAll();
         return res.json(empresas)
     },
+    
     async store(req, res) {
         const {emp_nome, emp_contato, emp_email} = req.body;
 
