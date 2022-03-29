@@ -39,5 +39,19 @@ module.exports = {
         });
 
         return res.json(funcionario)
+    },
+    async update(req, res) {
+        const { funcionario_id } = req.params
+        const { fun_nome, fun_email, fun_password, fun_sexo } = req.body
+
+        await Funcionarios.update({
+            fun_nome, fun_email, fun_password, fun_sexo
+        }, {
+            where: { id: funcionario_id }
+        });
+        return res.status(200).send({
+            status: 1,
+            message: "Funcionário atualizado com sucesso!"
+        })
     }
 }

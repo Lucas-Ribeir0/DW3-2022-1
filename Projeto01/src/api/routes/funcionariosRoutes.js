@@ -9,4 +9,6 @@ router.get('/empresa/:emp_id/funcionarios', funcionariosControllers.index)
 
 router.post('/empresa/:emp_id/funcionarios', funcionariosControllers.store)
 
+router.put('/funcionario/:funcionario_id', funcionariosControllers.update)
+
 module.exports = router
