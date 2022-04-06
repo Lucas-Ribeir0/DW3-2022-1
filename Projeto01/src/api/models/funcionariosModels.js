@@ -10,7 +10,11 @@ class Funcionarios extends Model {
             fun_sexo: DataTypes.STRING
         }, {
             sequelize,
-            tableName: 'funcionarios'
+            tableName: 'funcionarios',
+
+        hooks: {
+            beforeCreate: (funcionario)
+        }
         });
         return this
     }
