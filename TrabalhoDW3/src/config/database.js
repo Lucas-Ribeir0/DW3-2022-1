@@ -3,9 +3,9 @@ module.exports = {
     dialect: "mysql",
     username: "root",
     password: "fatec123*",
-    database: "webiii",
+    database: "webIII",
     define: {
-        timestamp: true,
+        timestamps: true,
         underscored: true,
-    }
-}
+    },
+};
