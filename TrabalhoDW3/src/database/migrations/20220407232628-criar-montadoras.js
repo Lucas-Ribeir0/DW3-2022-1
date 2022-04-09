@@ -1,6 +1,6 @@
 'use strict';
 
-const { sequelize } = require("../../api/models/empresasModels");
+const { sequelize } = require("../../api/models/montadorasModels");
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {

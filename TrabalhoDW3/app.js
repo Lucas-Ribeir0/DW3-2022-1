@@ -5,14 +5,14 @@ require('./src/database/indexDb.js');
 
 // instanciar o express
 const app = express();
-
+ 
 app.use(express.json())
+ 
+const montadorasRoutes = require('./src/api/routes/montadorasRoutes.js')
+const motocicletasRoutes = require('./src/api/routes/motocicletasRoutes.js')
 
-const empresasRoutes = require('./src/api/routes/empresasRoutes.js')
-const funcionariosRoutes = require('./src/api/routes/funcionariosRoutes.js')
-
-app.use(empresasRoutes)
-app.use(funcionariosRoutes)
+app.use(montadorasRoutes)
+app.use(motocicletasRoutes)
 
 //configurar a porta e url para execução do aplicativo
 app.set('url', 'http://localhost:')
