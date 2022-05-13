@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "ed4e1ad4-4837-414a-90a9-6ca8489bf334",
+    "colName": "Empresas",
+    "created": "2022-03-22T22:13:30.197Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "3a834827-ebcf-45f3-a992-057c42cb7ba3",
+    "colName": "Funcionarios",
+    "created": "2022-03-22T23:01:24.696Z",
+    "sortNum": 20000,
+    "folders": []
+  },
+  {
+    "_id": "73197c30-4ae9-4aef-be14-bff9617d4bf6",
+    "colName": "Usuários",
+    "created": "2022-03-25T23:26:44.180Z",
+    "sortNum": 25000,
+    "folders": []
+  },
+  {
+    "_id": "b728215c-da6b-4bde-b6aa-72c8c4a277f7",
+    "colName": "Enderecos",
+    "created": "2022-03-25T23:29:27.562Z",
+    "sortNum": 15000,
+    "folders": []
+  }
+]
